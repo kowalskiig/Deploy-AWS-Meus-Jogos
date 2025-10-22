@@ -46,21 +46,15 @@ A nova versão do projeto evoluiu para um backend **muito mais robusto e alinhad
 
 > ---
 
-## Deploy e Otimização de Custos (AWS): A Batalha Vencida!
+## Deploy(AWS)
 
-Colocar o **GameList** para rodar na **AWS** foi o toque final para consolidar a experiência de *cloud deployment*! Ver a aplicação **Spring Boot** subir em um ambiente de produção real, utilizando o **Docker**.
+Para consolidar a experiência de *cloud deployment*, realizei um deploy simples utilizandoa AWS.
 
-Este deploy não foi apenas um teste, mas a prova prática do domínio em:
 
-* **Infraestrutura como Serviço (IaaS):** Consegui configurar e gerenciar uma instância **Amazon EC2** do zero para hospedar o *backend*.
-* **Banco de Dados Gerenciado (RDS):** A experiência com o **Amazon RDS (PostgreSQL)** me mostrou como é fácil ter um banco de dados robusto, focado apenas no código e na performance, sem me preocupar com a infraestrutura.
-* **Segurança e Redes:** Apliquei o conhecimento de **Security Groups** para garantir que o EC2 e o RDS conversassem de forma segura, o que é crucial em qualquer ambiente de produção.
+*  Consegui configurar e gerenciar uma instância **Amazon EC2** do zero para hospedar o *backend*.
+* A experiência com o **Amazon RDS (PostgreSQL)** me mostrou como é fácil ter um banco de dados robusto, focado apenas no código e na performance, sem me preocupar com a infraestrutura.
+*  Apliquei o conhecimento de **Security Groups** para garantir que o EC2 e o RDS conversassem de forma segura, o que é crucial em qualquer ambiente de produção.
 
-**Status Atual: Cuidado e Otimização!**
-
-> A infraestrutura foi desligada, mas o código, o **Dockerfile** e as configurações de deploy estão aqui no repositório, servindo como a **evidência completa** dessa jornada de aprendizado em *cloud deployment*.
-
-### Evidências da Implementação (Sucesso Comprovado!)
 
 Abaixo estão as "provas" de que a API funcionou perfeitamente:
 

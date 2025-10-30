@@ -20,12 +20,11 @@ public class GameService {
     private GameRepository gameRepository;
 
     @Transactional(readOnly = true)
-   public GameDTO findById(Long id){
-       Games game = gameRepository.findById(id).
-               orElseThrow(() -> new ResourceNotFoundException("Id " + id + " does not correspond to any game"));
+    public Games findById(Long id){
 
-       return GameMapper.entityToFullDto(game);
-   }
+        return gameRepository.findById(id).
+                orElseThrow(() -> new ResourceNotFoundException("Id " + id + " does not correspond to any game"));
+    }
 
     @Transactional(readOnly = true)
     public List<GameMinDTO> findByList(Long listId) {

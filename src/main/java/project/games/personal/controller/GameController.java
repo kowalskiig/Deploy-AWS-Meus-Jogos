@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import project.games.personal.dto.GameDTO;
 import project.games.personal.dto.GameMinDTO;
+import project.games.personal.entities.Games;
+import project.games.personal.mapper.GameMapper;
 import project.games.personal.service.GameService;
 
 import java.util.List;
@@ -22,8 +24,8 @@ public class GameController {
     @SecurityRequirement(name = "bearerAuth")
     @GetMapping(value = "/{id}")
     public ResponseEntity<GameDTO> findByID(@PathVariable Long id){
-        GameDTO result = gameService.findById(id);
-        return ResponseEntity.ok(result);
+        Games result = gameService.findById(id);
+        return ResponseEntity.ok(GameMapper.entityToFullDto(result));
     }
 
 

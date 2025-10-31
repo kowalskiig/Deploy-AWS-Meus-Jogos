@@ -21,18 +21,20 @@ jobs:
           cache: maven
 
       - name: Executar os testes com Maven
+        working-directory: ./application
         run: mvn test
 
 
-      - name: Empacotar aplicação com Maven
+      - name: Empacotar artifact com Maven
+        working-directory: ./application
         run: mvn package -DskipTests
 
 
-      - name: Guardar artefato em cache
+      - name: Upload do artifact
         uses: actions/upload-artifact@v4
         with:
           name: gamelist-api-artifact
-          path: application/target
+          path: ./application/target
 
   publish_to_registry:
     needs: [build]
@@ -69,7 +71,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: ./application/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

@@ -1,0 +1,41 @@
+name: Build and Publish
+on:
+  push:
+    branches: [ 'feat/tests' ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+
+      - name: Configura jdk
+        uses: actions/setup-java2v4
+        with:
+          java-version: 21
+          distribution: temurin
+          architecture: x64
+          cache: maven
+
+      - name: Executar os testes com Maven
+        run: mvn test
+
+
+      - name: Empacotar aplicação com Maven
+        run: mvn package -DskipTests
+
+
+      - name: Guardar artefato em cache
+        uses: actions/cache@v3
+        with:
+          key: package
+          path: .
+
+
+
+
+
+

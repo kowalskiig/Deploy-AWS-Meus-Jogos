@@ -22,9 +22,10 @@ No entanto, não havia:
 - Endpoins retornava entidades, e não retornavam status code.
 - Também alguns problemas de performance com o banco de dados, com consultas ineficientes retornando todos os dados sempre.
 
+--- 
 ### 2 parte:
 
-Foco foi implementar e aplicar boas práticas no desenvolvimento de APIs REST, com uma visão mais criticas do desenvolvimento de software:
+Foco foi implementar e aplicar boas práticas no desenvolvimento de APIs REST, com uma visão mais critica do desenvolvimento de software:
 - Implementei um sistema de login com Spring Security, configurando o sistema de geração de token e bloqueio de endpoints por roles.
 - Implementei retornos com status code e implementei alguma validações no service para dados inexistentes e inconsistentes.
 - Refatorei linhas de código no service, removendo redundancias e reduzindo linhas de códigos inuteis.
@@ -32,6 +33,7 @@ Foco foi implementar e aplicar boas práticas no desenvolvimento de APIs REST, c
 
 Foi realizada em Agosto/Setembro de 2025.
 
+---
 
 ### 3 parte:
 
@@ -80,9 +82,14 @@ Também decidi explorar a AWS e realizar o deploy visando aumentar minha familia
 - AWS RDS
 - Docker
 - PostgreSQL
+- Maven
 
 ---
 
+### Visão geral do projeto:
+
+- Projeto me permitiu ter uma visão diferente do desenvolvimento em diferentes momentos da minha carreira.
+- Serviu como registro do meu progresso e me fez acompanhar meus erros, posteriormente com uma visão mais critica.
 
 <p>
   <a href="https://www.linkedin.com/in/gustavokowalski/" target="_blank" style="margin-right: 20px;">
